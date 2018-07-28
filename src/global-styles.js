@@ -21,7 +21,7 @@ injectGlobal`
     background: #f9fafc;
     font-family: 'Open Sans', sans-serif; 
     line-height: 1.5;
-    padding: 50px 0;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -53,6 +53,26 @@ injectGlobal`
       pre[class*="language-"] {
         padding: 25px;
       }
+    }
+  }
+  
+  .social-link {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+
+    svg, img {
+      display: inline-block;
+      height: 20px;
+      margin-right: 5px;
+      stroke: #6e849c;
+      vertical-align: middle;
+      width: 20px;
+    }
+
+    &:hover {
+      border-color: #3e465b;
     }
   }
 `;
