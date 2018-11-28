@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Web & Game development | Tech Leadership', // Required
   author: 'Ashish Gambhir @ashbhir', // Required
-  tagline: 'This blog let\'s me talk about web and game development, technology leadership and whatever shit is on my mind !',
+  tagline: 'This blog let\'s me talk about web, game and blockchain development, technology leadership and whatever other things are on my mind !',
   primaryColor: '#000', // Required
   showHeaderImage: false,
   showShareButtons: true,
