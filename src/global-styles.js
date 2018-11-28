@@ -12,6 +12,9 @@ injectGlobal`
 
   html {
     font-size: 62.5%;
+    @media only screen and (max-width: 640px) {
+      font-size: 2.4vw;
+    }
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     box-sizing: border-box;

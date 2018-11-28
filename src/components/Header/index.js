@@ -29,10 +29,11 @@ class Header extends Component {
 
   render() {
     const { author, tagline, social } = this.props.config;
+    const showMenuIcon = false;
     return (
       <Container>
         <Wrapper>
-          <MenuIcon menuShown={this.state.menuShown} onClick={this.toggleMenu}/>
+         { showMenuIcon && <MenuIcon menuShown={this.state.menuShown} onClick={this.toggleMenu}/> }
           <HeaderInfo>
             {userConfig.showHeaderImage && (
               <HeaderImage/>

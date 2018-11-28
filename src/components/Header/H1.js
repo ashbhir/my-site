@@ -7,6 +7,7 @@ const H1 = styled(BasicH1)`
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 3rem;
 `;
 
 export default H1;
