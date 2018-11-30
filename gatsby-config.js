@@ -1,10 +1,10 @@
 const userConfig = require('./config');
 
 module.exports = {
-  pathPrefix: `/devblog`,
+  pathPrefix: `/`,
   siteMetadata: {
     title: userConfig.title,
-    author: userConfig.author,
+    author: userConfig.author
   },
   plugins: [
     {
@@ -48,6 +48,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`
   ],
 }

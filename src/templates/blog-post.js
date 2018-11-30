@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import get from 'lodash/get';
+import { DiscussionEmbed } from "disqus-react";
 import userConfig from '../../config';
 
 import Container from '../components/Container';
@@ -17,6 +18,11 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark;
     const author = get(this.props, 'data.site.siteMetadata.author');
     const { previous, next } = this.props.pathContext;
+    const disqusShortname = "ashbhir";
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    };
    
     let url = '';
     if (typeof window !== `undefined`) {
@@ -55,7 +61,8 @@ class BlogPostTemplate extends React.Component {
               {next.frontmatter.title} →
             </Button>
           )}
-        </PageNav>     
+        </PageNav>
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </Container>
     )
   }
