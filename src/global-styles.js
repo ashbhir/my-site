@@ -78,4 +78,7 @@ injectGlobal`
       border-color: #3e465b;
     }
   }
+  #disqus_thread {
+    margin: 10px;
+  }
 `;
