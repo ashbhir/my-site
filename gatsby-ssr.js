@@ -2,7 +2,7 @@ import React from "react";
 import { renderToString } from "react-dom/server";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 
-exports.replaceRenderer = ({
+const replaceRenderer = ({
   bodyComponent,
   replaceBodyHTMLString,
   setHeadComponents
@@ -12,3 +12,5 @@ exports.replaceRenderer = ({
   replaceBodyHTMLString(bodyHTML);
   setHeadComponents([sheet.getStyleElement()]);
 };
+
+export default replaceRenderer;

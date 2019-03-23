@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import GatsbyLink from 'gatsby-link';
+import { Link } from 'gatsby';
 import userConfig from '../../../config';
 
-const ContinueReading = styled(GatsbyLink)`
+const ContinueReading = styled(Link)`
   color: #666d71;
   display: inline-block;
   font-size: 14px;

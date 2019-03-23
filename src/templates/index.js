@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Helmet from 'react-helmet';
 import userConfig from '../../config';
 
@@ -7,9 +7,9 @@ import Container from '../components/Container';
 import Summary from '../components/Summary';
 import Pagination from '../components/Pagination';
  
-const IndexPage = ({ pathContext }) => {
-  const { group, index, pageCount } = pathContext;
-  const previousUrl = index - 1 == 1 ? "" : (index - 1).toString();
+const IndexPage = ({ pageContext }) => {
+  const { group, index, pageCount } = pageContext;
+  const previousUrl = index - 1 === 1 ? "" : (index - 1).toString();
   const nextUrl = (index + 1).toString();
   return (
     <Container>

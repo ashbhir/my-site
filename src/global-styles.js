@@ -1,7 +1,7 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import styledNormalize from 'styled-normalize';
  
-injectGlobal`
+export default createGlobalStyle`
   ${styledNormalize}
   
   *,

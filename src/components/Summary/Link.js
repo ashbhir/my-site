@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import GatsbyLink from 'gatsby-link';
+import { Link } from 'gatsby';
 import userConfig from '../../../config';
 
-const Link = styled(GatsbyLink)`
+const GatsbyLink = styled(Link)`
   color: #3e465b;
   text-decoration: none;
 
@@ -11,4 +11,4 @@ const Link = styled(GatsbyLink)`
   }
 `;
 
-export default Link;
+export default GatsbyLink;

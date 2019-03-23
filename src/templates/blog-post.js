@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import get from 'lodash/get';
 import { DiscussionEmbed } from "disqus-react";
 import userConfig from '../../config';
+import { graphql } from "gatsby"
 
 import Container from '../components/Container';
 import Card from '../components/Card';
@@ -17,7 +18,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const author = get(this.props, 'data.site.siteMetadata.author');
-    const { previous, next } = this.props.pathContext;
+    const { previous, next } = this.props.pageContext;
     const disqusShortname = "ashbhir";
     const disqusConfig = {
       identifier: post.id,
@@ -28,7 +29,6 @@ class BlogPostTemplate extends React.Component {
     if (typeof window !== `undefined`) {
       url = window.location.href;
     }
-
     return (
       <Container>
         <Helmet title={`${post.frontmatter.title} | ${author}`} />
