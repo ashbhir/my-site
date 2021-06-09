@@ -1,10 +1,10 @@
-# DevBlog
+# My Site 
 
-DevBlog is a fully customizable blog template designed for developers (or anyone else) wanting to get into blogging. It comes ready to go and deploy (with ease) or can be edited and extended however you like. The blog is completely statically generated via GatsbyJS, comes with syntax highlighting (via PrismJS) out of the box, and has server-side rendering built-in, among other things.
+It is a fully customizable blog template designed for developers (or anyone else) wanting to get into blogging. It comes ready to go and deploy (with ease) or can be edited and extended however you like. The blog is completely statically generated via GatsbyJS, comes with syntax highlighting (via PrismJS) out of the box, and has server-side rendering built-in, among other things.
 
-To view a live demo, [click here](https://ryanfitzgerald.github.io/devblog/).
+To view a live demo, [click here](https://ashishgambhir.com).
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RyanFitzgerald/devblog)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ashbhir/my-site)
 
 ## Features
 * Fully responsive
@@ -34,7 +34,7 @@ The first step is to get the GatsbyJS CLI installed locally. This can be accompl
 
 #### 2. Create a new Gatsby Site using this repo
 
-When creating a new Gatsby site, the CLI allows you to specify a starter, in this case simply provide the URL for this repo. This can be accomplished by running the command ```gatsby new YOUR_BLOG_NAME https://github.com/RyanFitzgerald/devblog```
+When creating a new Gatsby site, the CLI allows you to specify a starter, in this case simply provide the URL for this repo. This can be accomplished by running the command ```gatsby new YOUR_BLOG_NAME https://github.com/ashbhir/my-site```
 
 #### 3. Edit or use the template as needed
 
@@ -50,18 +50,31 @@ Basic configuration can be done via the ```config.js``` file in the root of the 
 
 ```javascript
 module.exports = {
-  title: 'Dev Blog', // Required
-  author: 'Ryan Fitzgerald', // Required
-  tagline: 'Full-stack Web Developer',
-  primaryColor: '#3498db', // Required
-  showHeaderImage: true,
+  title: 'Web & Game development | Technology Leadership', // Required
+  author: 'Ashish Gambhir @ashbhir', // Required
+  tagline: 'A Blog about Web and Game development, Technology Leadership and some other random things!',
+  primaryColor: '#000', // Required
+  showHeaderImage: false,
   showShareButtons: true,
   postsPerPage: 5, // Required
   social: {
-    website: 'https://ryanfitzgerald.ca',
-    github: 'https://github.com/ryanfitzgerald',
-    twitter: 'https://twitter.com/ryanafitzgerald',
-    linkedin: 'https://ca.linkedin.com/in/ryanafitzgerald'
+    website: null,
+    github: {
+      link: 'https://github.com/ashbhir',
+      imgSrc: './src/components/Social/logo-github.svg'
+    },
+    twitter: {
+      link: 'https://twitter.com/ashbhir',
+      imgSrc: './src/components/Social/logo-twitter.svg',
+    },
+    linkedin: {
+      link: 'https://www.linkedin.com/in/ashishgambhir2/',
+      imgSrc: './src/components/Social/logo-linkedin.svg'
+    },
+    medium: {
+      link: 'https://medium.com/@ashishgambhir',
+      imgSrc: './src/components/Social/logo-medium.png'
+    }
   }
 };
 ```
@@ -136,7 +149,7 @@ Alternatively, if you wish to deploy it to ```https://YOURUSERNAME.github.io``` 
 One of the easiest methods of deploying the blog would be to use [Netlify](https://www.netlify.com/). To deploy to Netlify, simply click the button below and follow the prompts.
 
 <!-- Markdown snippet -->
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RyanFitzgerald/devblog)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ashbhir/my-site)
 
 ### Other
 
