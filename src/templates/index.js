@@ -6,6 +6,8 @@ import Card from '../components/Card';
 import Container from '../components/Container';
 import Summary from '../components/Summary';
 import Pagination from '../components/Pagination';
+import Header from "../components/Header";
+import Divider from "../components/Divider";
  
 const IndexPage = ({ pageContext }) => {
   const { group, index, pageCount } = pageContext;
@@ -14,16 +16,20 @@ const IndexPage = ({ pageContext }) => {
   return (
     <Container>
       <Helmet title={`${userConfig.title} | ${userConfig.author}`} />
-      {group.map(({ node }) => (
-        <Card key={node.fields.slug}>
-          <Summary 
-            date={node.frontmatter.date}
-            title={node.frontmatter.title}
-            excerpt={node.excerpt}
-            image={node.frontmatter.featuredImage}
-            slug={node.fields.slug}
-          />
-        </Card>
+      <Header config={userConfig}/>
+      {group
+        .filter(({ node }) => !node.fields.slug.match('privacy-terms-captains-cricket'))
+        .map(({ node }) => (
+          <Card key={node.fields.slug}>
+            <Summary 
+              date={node.frontmatter.date}
+              title={node.frontmatter.title}
+              excerpt={node.excerpt}
+              image={node.frontmatter.featuredImage}
+              slug={node.fields.slug}
+            />
+            <Divider />
+          </Card>
       ))}
       <Pagination 
         isFirst={index === 1}

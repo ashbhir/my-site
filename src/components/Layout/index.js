@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from "prop-types";
 import 'prismjs/themes/prism.css';
 import GlobalStyles from '../../global-styles';
-import userConfig from '../../../config';
-
-import Header from '../Header';
 
 class Layout extends React.Component {
   render() {
@@ -12,7 +9,6 @@ class Layout extends React.Component {
     return (
       <div>
         <GlobalStyles />
-        <Header config={userConfig}/>
         {children}
       </div>
     )
