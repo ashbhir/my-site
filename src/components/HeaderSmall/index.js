@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import userConfig from '../../../config';
 
-import Container from '../Container';
 import Title from './Title';
 import Link from './Link';
 import Wrapper from './Wrapper';
@@ -24,7 +22,7 @@ class Header extends Component {
   }
 
   render() {
-    const { author, tagline, social } = this.props.config;
+    const { author } = this.props.config;
     return (
       <Wrapper>
         <HeaderInfo>
