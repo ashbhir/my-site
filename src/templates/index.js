@@ -1,5 +1,18 @@
 import React from "react";
 import Helmet from 'react-helmet';
+import {
+  Button,
+  ButtonGroup,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
+  Editable,
+  EditableInput,
+  EditablePreview
+} from "@chakra-ui/react"
+
 import userConfig from '../../config';
 
 import Card from '../components/Card';
@@ -37,7 +50,35 @@ const IndexPage = ({ pageContext }) => {
         nextUrl={nextUrl}
         previousUrl={previousUrl}
       />
+      <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+      <FormControl id="name">
+        <FormLabel>Name</FormLabel>
+        <Input type="text" />
+      </FormControl>
+      <FormControl id="email">
+        <FormLabel>Email address</FormLabel>
+        <Input type="email" />
+      </FormControl>
+      <Editable defaultValue="Take some chakra">
+        <EditablePreview />
+        <EditableInput />
+      </Editable>
+      <p>
+        <label>Your Role: <select name="role[]" multiple>
+          <option value="leader">Leader</option>
+          <option value="follower">Follower</option>
+        </select></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <Button type="submit">Send</Button>
+      </p>
+
+    </form>
     </Container>
+      
   );
 };
 export default IndexPage;

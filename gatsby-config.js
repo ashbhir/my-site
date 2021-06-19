@@ -54,6 +54,7 @@ module.exports = {
       options: {
           component: require.resolve(`./src/components/Layout`)
       }
-    }
+    },
+    '@chakra-ui/gatsby-plugin'
   ],
 }
