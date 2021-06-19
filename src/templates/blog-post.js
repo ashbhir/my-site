@@ -5,6 +5,7 @@ import { DiscussionEmbed } from "disqus-react";
 import userConfig from '../../config';
 import { graphql } from "gatsby"
 
+import HeaderSmall from "../components/HeaderSmall";
 import Container from '../components/Container';
 import Card from '../components/Card';
 import Article from '../components/Article';
@@ -30,40 +31,43 @@ class BlogPostTemplate extends React.Component {
       url = window.location.href;
     }
     return (
-      <Container>
+      <>
         <Helmet title={`${post.frontmatter.title} | ${author}`} />
-        <Card>
-          <ArticleHeader>
-            {post.frontmatter.featuredImage &&
-              <FeaturedImage sizes={post.frontmatter.featuredImage.childImageSharp.sizes}/>
-            }
-            <h1>{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.date}</p>
-            <span></span>
-          </ArticleHeader>
-          <Article>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </Article>
-          {userConfig.showShareButtons && (
-            <Share url={url} title={post.frontmatter.title} />
-          )}
-        </Card>
-        
-        <PageNav>
-          {previous && (
-            <Button to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Button>
-          )}
+        <HeaderSmall config={userConfig} />
+        <Container>          
+          <Card>
+            <ArticleHeader>
+              {post.frontmatter.featuredImage &&
+                <FeaturedImage sizes={post.frontmatter.featuredImage.childImageSharp.sizes}/>
+              }
+              <h1>{post.frontmatter.title}</h1>
+              <p>{post.frontmatter.date}</p>
+              <span></span>
+            </ArticleHeader>
+            <Article>
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </Article>
+            {userConfig.showShareButtons && (
+              <Share url={url} title={post.frontmatter.title} />
+            )}
+          </Card>
+          
+          <PageNav>
+            {previous && (
+              <Button to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Button>
+            )}
 
-          {next && (
-            <Button to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Button>
-          )}
-        </PageNav>
-        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-      </Container>
+            {next && (
+              <Button to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Button>
+            )}
+          </PageNav>
+          <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+        </Container>
+      </>
     )
   }
 }
