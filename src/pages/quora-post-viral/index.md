@@ -1,9 +1,9 @@
 ---
 title: Look ma, my post just got viral on Quora!
-date: "2017-02-15"
+date: "2016-02-15"
 ---
 
-After writing some random posts on quora and getting a maximum of 30 upvotes, one of my post suddenly shot up and in no time I saw people from all over the world upvoting, commenting and sharing my post. I even started getting facebook friend requests by random people - mostly girls :) I got 25k upvotes within a week! So here's what the post was about.
+After writing some random posts on quora and getting a maximum of 30 upvotes, one of my post suddenly shot up and in no time I saw people from all over the world upvoting, commenting and sharing my post. I even started getting facebook friend requests by random people. Surprisingly, I got 25k upvotes within a week! So here's what the post was about.
 
 > This article was originally published in [Quora](https://www.quora.com/What-is-the-first-thing-you-did-with-your-salary/answer/Ashish-Gambhir)
 
